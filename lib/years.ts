@@ -1,0 +1,125 @@
+import type { Year } from "./types";
+
+const PALETTES: [string, string][] = [
+  ["#FFC93C", "#FF6B9D"],
+  ["#7CFFCB", "#74F2CE"],
+  ["#A78BFA", "#F472B6"],
+  ["#60A5FA", "#34D399"],
+  ["#FB7185", "#FBBF24"],
+  ["#22D3EE", "#A78BFA"],
+  ["#F0ABFC", "#67E8F9"],
+  ["#FDE68A", "#FCA5A5"],
+  ["#86EFAC", "#FDE047"],
+  ["#FCA5A5", "#A78BFA"],
+];
+const pal = (i: number) => PALETTES[i % PALETTES.length];
+
+export const YEARS: Year[] = [
+  {
+    year: 2023,
+    theme: "Humble Origins",
+    accent: "#F0ABFC",
+    artComponent: "Art2023",
+    location: "Abbey Park HS · Oakville, ON",
+    icon: "/icons/2023.png",
+    desc:
+      "May 13, 2023. The humble origins. The mission was simple and only a little audacious: build a Hack the North, but for high schoolers.",
+    stats: [
+      { n: "May 13", l: "2023" },
+      { n: "$1K+", l: "prize pool" },
+      { n: "12hr", l: "single-day" },
+    ],
+    execs: [
+      { initials: "DL", name: "David Lim", role: "Lead Organizer", uni: "Abbey Park HS", now: "Founded year one — the first fingerprint", ph1: pal(0)[0], ph2: pal(0)[1], headshot: "/headshots/2023/lim.webp" },
+      { initials: "AS", name: "Adam Selim", role: "Sponsorships & Logistics", uni: "Abbey Park HS", now: "Building Vectus · SE→CS @ Waterloo", ph1: pal(1)[0], ph2: pal(1)[1], headshot: "/headshots/2023/selim.webp" },
+      { initials: "AJ", name: "Alec Jiang", role: "Design & Logistics", uni: "Abbey Park HS", now: "Drew year one's face — every poster, every pixel", ph1: pal(2)[0], ph2: pal(2)[1], headshot: "/headshots/2023/jiang.webp", linkedin: "https://www.linkedin.com/in/alec-jiang-4b3749203/" },
+      { initials: "JF", name: "James Fan", role: "Web Development", uni: "Abbey Park HS", now: "Shipped eurekahacks.ca v1 — the index that started it all", ph1: pal(3)[0], ph2: pal(3)[1], headshot: "/headshots/2023/fan.webp" },
+      { initials: "SA", name: "Sultan Alimzhanov", role: "Marketing", uni: "Abbey Park HS", now: "HDSB Student Trustee '23–24", ph1: pal(4)[0], ph2: pal(4)[1], headshot: "/headshots/2023/alimzhanov.webp" },
+      { initials: "RP", name: "Rahul Patel", role: "Finance & Outreach", uni: "Abbey Park HS", now: "Balanced year one's books before anyone knew what a hackathon cost", ph1: pal(5)[0], ph2: pal(5)[1], headshot: "/headshots/2023/patel.webp" },
+    ],
+  },
+  {
+    year: 2024,
+    theme: "Where Ideas Meet Innovation",
+    accent: "#60A5FA",
+    artComponent: "Art2024",
+    location: "Abbey Park HS · Oakville, ON",
+    icon: "/icons/2024.png",
+    desc:
+      "May 4, 2024. Running it back. Twice the hackers.",
+    stats: [
+      { n: "114", l: "hackers" },
+      { n: "$7.85K", l: "prize pool" },
+      { n: "May 4", l: "2024" },
+    ],
+    execs: [
+      { initials: "AS", name: "Adam Selim", role: "Co-President", uni: "Abbey Park HS", now: "Building Vectus · SE→CS @ Waterloo", ph1: pal(0)[0], ph2: pal(0)[1], headshot: "/headshots/2024/Adam.webp" },
+      { initials: "DL", name: "David Lim", role: "Co-President", uni: "Abbey Park HS", now: "Co-led year two — pilot to a place beginners chose", ph1: pal(1)[0], ph2: pal(1)[1], headshot: "/headshots/2024/David.webp" },
+      { initials: "YP", name: "Yohance Pawania", role: "Director of Logistics", uni: "Abbey Park HS", now: "114 hackers, zero meltdowns", ph1: pal(2)[0], ph2: pal(2)[1], headshot: "/headshots/2024/Yohance.webp", linkedin: "https://www.linkedin.com/in/yohance-pawania-30aa902a4/" },
+      { initials: "RP", name: "Rahul Patel", role: "Director of Sponsorships", uni: "Abbey Park HS", now: "Closed the $7.85K pool — 8x year one", ph1: pal(3)[0], ph2: pal(3)[1], headshot: "/headshots/2024/Rahul.webp" },
+      { initials: "AJ", name: "Alec Jiang", role: "Director of Visual Design", uni: "Abbey Park HS", now: "Designed the cyan-pink 2024 identity end to end", ph1: pal(4)[0], ph2: pal(4)[1], headshot: "/headshots/2024/Alec.webp", linkedin: "https://www.linkedin.com/in/alec-jiang-4b3749203/" },
+      { initials: "BZ", name: "Ben Zhou", role: "Director of Web Development", uni: "Abbey Park HS", now: "CE '29 @ Waterloo", ph1: pal(5)[0], ph2: pal(5)[1], headshot: "/headshots/2024/Ben.webp" },
+      { initials: "JF", name: "James Fan", role: "Director of Web Development", uni: "Abbey Park HS", now: "Co-shipped 2024.eurekahacks.ca", ph1: pal(6)[0], ph2: pal(6)[1], headshot: "/headshots/2024/James.webp" },
+      { initials: "MM", name: "Mahiya Majeed", role: "Director of Social Media", uni: "Abbey Park HS", now: "Ran the 2024 voice across IG, TikTok, hallway flyers", ph1: pal(7)[0], ph2: pal(7)[1], headshot: "/headshots/2024/Mahiya.webp" },
+    ],
+  },
+  {
+    year: 2025,
+    theme: "Sky's the Limit",
+    accent: "#A78BFA",
+    artComponent: "Art2025",
+    location: "Abbey Park HS · Oakville, ON",
+    icon: "/icons/2025.png",
+    desc:
+      "April 5, 2025. 10x the prize valuation. 3D printers on the floor.",
+    stats: [
+      { n: "150+", l: "hackers" },
+      { n: "40+", l: "schools" },
+      { n: "$11.5K", l: "prize pool" },
+    ],
+    execs: [
+      { initials: "EH", name: "Eason Huang", role: "Co-President", uni: "Abbey Park HS", now: "DECA International (ICDC) 1st place — Virtual Business Challenge", ph1: pal(0)[0], ph2: pal(0)[1], headshot: "/headshots/2025/eason.webp", linkedin: "https://www.linkedin.com/in/eason-huang-647391295/" },
+      { initials: "NS", name: "Naman Sonawane", role: "Co-President", uni: "Abbey Park HS", now: "AI/NLP Code Evaluator @ Cohere", ph1: pal(1)[0], ph2: pal(1)[1], headshot: "/headshots/2025/naman.webp", linkedin: "https://www.linkedin.com/in/naman-sonawane" },
+      { initials: "AY", name: "Aaron Ye", role: "Director of Logistics", uni: "Abbey Park HS", now: "Hack the North 2025 Finalist · Top 12 / 250+", ph1: pal(2)[0], ph2: pal(2)[1], headshot: "/headshots/2025/aaron.webp", linkedin: "https://www.linkedin.com/in/aaron-ye-7574872a0/" },
+      { initials: "GG", name: "Gregory Gu", role: "Director of Tech", uni: "White Oaks SS", now: "Shipped 2025.eurekahacks.ca · duck parallax and all", ph1: pal(3)[0], ph2: pal(3)[1], headshot: "/headshots/2025/gregory.webp", linkedin: "https://www.linkedin.com/in/gregory-gu-b777212ba/" },
+      { initials: "YP", name: "Yohance Pawania", role: "Senior Advisor", uni: "Abbey Park HS", now: "Three editions running · still hasn't slept", ph1: pal(4)[0], ph2: pal(4)[1], headshot: "/headshots/2025/yohance.webp", linkedin: "https://www.linkedin.com/in/yohance-pawania-30aa902a4/" },
+      { initials: "AK", name: "Aadya Khanna", role: "Director", uni: "Abbey Park HS", now: "CS + Finance @ Waterloo (incoming)", ph1: pal(5)[0], ph2: pal(5)[1], headshot: "/headshots/2025/aadya.webp", linkedin: "https://www.linkedin.com/in/aadya-khanna-050342293/" },
+      { initials: "ST", name: "Suri Tian", role: "Director", uni: "Abbey Park HS", now: "Software Engineering @ Waterloo (incoming)", ph1: pal(6)[0], ph2: pal(6)[1], headshot: "/headshots/2025/suri.webp", linkedin: "https://www.linkedin.com/in/suri-tian-011b77282/" },
+      { initials: "ML", name: "Margaret Liu", role: "Director", uni: "Abbey Park HS", now: "Year-two vet · returning for 2026's sketchbook arc", ph1: pal(0)[0], ph2: pal(0)[1], headshot: "/headshots/2025/margaret.webp", linkedin: "https://www.linkedin.com/in/margaret-liu-774036318/" },
+      { initials: "MK", name: "Minsun Kim", role: "Director", uni: "Abbey Park HS", now: "Two editions running · 2025→2026", ph1: pal(1)[0], ph2: pal(1)[1], headshot: "/headshots/2025/minsun.webp", linkedin: "https://www.linkedin.com/in/minsun-kim-8b62022aa/" },
+      { initials: "FJ", name: "Farouk Jabsheh", role: "Director", uni: "Abbey Park HS", now: "Year-three director · floor ops vet", ph1: pal(2)[0], ph2: pal(2)[1], headshot: "/headshots/2025/farouk.webp", linkedin: "https://www.linkedin.com/in/faroukjabsheh/" },
+      { initials: "JS", name: "Jimin So", role: "Director", uni: "Abbey Park HS", now: "Year-three director · operations & outreach", ph1: pal(4)[0], ph2: pal(4)[1], headshot: "/headshots/2025/jimin.webp", linkedin: "https://www.linkedin.com/in/jimin-so-1878a2285/" },
+    ],
+  },
+  {
+    year: 2026,
+    theme: "Pulp Skyline",
+    accent: "#FDE047",
+    artComponent: "Art2026",
+    location: "Waterloo Accelerator Centre · Waterloo, ON",
+    icon: "/icons/2026.png",
+    desc:
+      "May 1–2, 2026. All-in on the hacker experience. Amazing food. Amazing prizes. Free NFC cards for every hacker. Duration doubled — first overnight edition.",
+    stats: [
+      { n: "24hr", l: "first overnight" },
+      { n: "$10K+", l: "prize pool" },
+      { n: "May 1–2", l: "2026" },
+    ],
+    execs: [
+      { initials: "JJ", name: "Jenny Jin", role: "Co-President", uni: "Abbey Park HS", now: "Just do that, no do this, you're doing it wrong…", ph1: pal(0)[0], ph2: pal(0)[1], headshot: "/headshots/2026/Jenny.webp" },
+      { initials: "EH", name: "Eason Huang", role: "Logistics", uni: "Abbey Park HS", now: "The best PM anyone could ask for, except maybe for himself", ph1: pal(1)[0], ph2: pal(1)[1], headshot: "/headshots/2026/Eason.webp", linkedin: "https://www.linkedin.com/in/eason-huang-647391295/" },
+      { initials: "DZ", name: "Daniel Zhu", role: "Sponsorships", uni: "Abbey Park HS", now: "Haha no G1", ph1: pal(3)[0], ph2: pal(3)[1], headshot: "/headshots/2026/DanielZhu.webp" },
+      { initials: "YP", name: "Yohance Pawania", role: "Sponsorships", uni: "Abbey Park HS", now: "Three editions running · quantum levitation", ph1: pal(4)[0], ph2: pal(4)[1], headshot: "/headshots/2026/Yohance.webp", linkedin: "https://www.linkedin.com/in/yohance-pawania-30aa902a4/" },
+      { initials: "JB", name: "Jacob Blais", role: "Sponsorships", uni: "Abbey Park HS", now: "Boba drinker 1000 · speaking 🗣️", ph1: pal(6)[0], ph2: pal(6)[1], headshot: "/headshots/2026/Jacob.webp" },
+      { initials: "AN", name: "Anvi Nambiar", role: "Marketing", uni: "Abbey Park HS", now: "Magic (and hates spiders)", ph1: pal(7)[0], ph2: pal(7)[1], headshot: "/headshots/2026/Anvi.webp" },
+      { initials: "PZ", name: "Peony Zuo", role: "Marketing Girl", uni: "Abbey Park HS", now: "Eats a bag of sour patch kids in 5 minutes", ph1: pal(8)[0], ph2: pal(8)[1], headshot: "/headshots/2026/Peony.webp" },
+      { initials: "NS", name: "Naman Sonawane", role: "Frontend Labourer", uni: "Abbey Park HS", now: "AI/NLP Code Evaluator @ Cohere", ph1: pal(9)[0], ph2: pal(9)[1], headshot: "/headshots/2026/Naman.webp", linkedin: "https://www.linkedin.com/in/naman-sonawane" },
+      { initials: "VY", name: "Victoria Yep", role: "Figma Warrior", uni: "Abbey Park HS", now: "Figma'd to within an inch of its life", ph1: pal(0)[0], ph2: pal(0)[1], headshot: "/headshots/2026/Victoria.webp" },
+      { initials: "MK", name: "Minsun Kim", role: "Everything", uni: "Abbey Park HS", now: "Memory of a goldfish · still ships everything", ph1: pal(1)[0], ph2: pal(1)[1], headshot: "/headshots/2026/Minsun.webp", linkedin: "https://www.linkedin.com/in/minsun-kim-8b62022aa/" },
+      { initials: "AL", name: "Alan Liu", role: "Backend Guru", uni: "Abbey Park HS", now: "5 cups of coffee a day", ph1: pal(2)[0], ph2: pal(2)[1], headshot: "/headshots/2026/Alan.webp" },
+      { initials: "NS", name: "Neel Shah", role: "Backend Guru", uni: "Abbey Park HS", now: "Centers a div without ChatGPT", ph1: pal(3)[0], ph2: pal(3)[1], headshot: "/headshots/2026/Neel.webp" },
+      { initials: "ML", name: "Margret Liu", role: "Sketchbook Goat", uni: "Abbey Park HS", now: "Forces people to kill spiders for her", ph1: pal(4)[0], ph2: pal(4)[1], headshot: "/headshots/2026/Margret.webp", linkedin: "https://www.linkedin.com/in/margaret-liu-774036318/" },
+      { initials: "DX", name: "Daniel Xu", role: "I Got It Guy", uni: "Abbey Park HS", now: "Testing is for cowards · just force push", ph1: pal(6)[0], ph2: pal(6)[1], headshot: "/headshots/2026/DanielXu.webp" },
+    ],
+  },
+];

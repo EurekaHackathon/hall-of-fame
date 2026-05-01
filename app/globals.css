@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #06070b;
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+/* hide scrollbar but keep scroll */
+html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; display: none; }
+html, body { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* hide system cursor when our custom one is active */
+.cursor-eureka, .cursor-eureka * {
+  cursor: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.text-shadow-strong {
+  text-shadow: 0 1px 4px rgba(0,0,0,.85), 0 0 24px rgba(0,0,0,.4);
+}
+
+.banner-scrim {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 70%),
+    linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 40%);
+}
+
+/* lede: thin accent bar + first-line emphasis instead of a giant dropcap */
+.lede {
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent, #FFC93C);
+}
+.lede::first-line {
+  color: #fff;
+}
+
+.accent-rule {
+  width: 36px;
+  height: 2px;
+  background: var(--accent, #FFC93C);
+  border-radius: 2px;
+}
+
+.crt-scanlines {
+  background-image: repeating-linear-gradient(
+    0deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 3px
+  );
+}
+
+.halftone {
+  background-image: radial-gradient(circle, rgba(0,0,0,0.45) 1.4px, transparent 1.6px);
+  background-size: 14px 14px;
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 16px 16px, 16px 16px;
+}
+
+.synth-grid {
+  background-image:
+    linear-gradient(rgba(255,0,255,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.4) 1px, transparent 1px);
+  background-size: 60px 60px, 60px 60px;
+}
