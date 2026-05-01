@@ -1,5 +1,6 @@
 "use client";
 import { YEARS } from "@/lib/years";
+import type { Exec } from "@/lib/types";
 
 const REASONS: { tag: string; title: string; body: string; accent: string }[] = [
   {
@@ -32,7 +33,7 @@ const ALUMNI_STACK = [
   YEARS.find((y) => y.year === 2024)?.execs[0], // Adam
   YEARS.find((y) => y.year === 2024)?.execs[1], // David
   YEARS.find((y) => y.year === 2023)?.execs[0], // David Lim '23
-].filter(Boolean) as NonNullable<ReturnType<typeof YEARS[number]["execs"][number]>>[];
+].filter(Boolean) as Exec[];
 
 export default function Banner2027() {
   return (
