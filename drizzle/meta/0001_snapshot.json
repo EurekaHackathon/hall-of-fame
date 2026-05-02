@@ -1,0 +1,177 @@
+{
+  "id": "9cf54935-69fd-4f61-8350-ccfa4b2a4d42",
+  "prevId": "d8049af2-64e9-4295-a6ec-609f6d642ca9",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.applications": {
+      "name": "applications",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "bigserial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "inserted_at": {
+          "name": "inserted_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "submittedAt": {
+          "name": "submittedAt",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "prefName": {
+          "name": "prefName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "school": {
+          "name": "school",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "grade": {
+          "name": "grade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "instagram": {
+          "name": "instagram",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "discord": {
+          "name": "discord",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "oneLine": {
+          "name": "oneLine",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "teamsRanked": {
+          "name": "teamsRanked",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flexible": {
+          "name": "flexible",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "why": {
+          "name": "why",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hours": {
+          "name": "hours",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "webProject": {
+          "name": "webProject",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "stack": {
+          "name": "stack",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "portfolioUrl": {
+          "name": "portfolioUrl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "accountUrl": {
+          "name": "accountUrl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "wrongWithEvent": {
+          "name": "wrongWithEvent",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "coldEmail": {
+          "name": "coldEmail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "room4y": {
+          "name": "room4y",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "anything": {
+          "name": "anything",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "referrer": {
+          "name": "referrer",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

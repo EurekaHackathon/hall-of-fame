@@ -41,19 +41,13 @@ export default function Banner({ year, idx }: { year: Year; idx: number }) {
         <div className="relative z-20 grid gap-8 md:gap-12 p-8 md:p-12 min-h-[560px] md:grid-cols-[minmax(0,1fr)_minmax(280px,320px)] items-start">
           {/* LEFT: text content */}
           <div className="flex flex-col gap-6 min-w-0 text-shadow-strong">
-            <div className="inline-flex items-center self-start gap-2 px-3 py-1.5 rounded-full text-[10px] tracking-[0.28em] uppercase font-mono"
-              style={{ background: `${year.accent}1f`, color: year.accent, border: `1px solid ${year.accent}55` }}>
-              <span className="w-1.5 h-1.5 rounded-full" style={{ background: year.accent }} />
-              {year.theme}
-            </div>
             <div className="min-w-0">
               <h2 className="font-archivo leading-[0.85] tracking-[-0.04em] text-white"
                 style={{ fontSize: "clamp(64px, 8vw, 120px)", textShadow: "0 6px 32px rgba(0,0,0,0.55)" }}>
                 {year.year}
               </h2>
-              <div className="flex items-center gap-3 mt-3">
-                <span className="accent-rule" />
-                <span className="font-mono text-[11px] tracking-[0.18em] uppercase text-white/75">{year.location}</span>
+              <div className="mt-3 font-instrument text-white/70 text-[14px]">
+                {year.location}
               </div>
             </div>
             <p className="lede font-fraunces italic text-white text-[16px] md:text-[18px] leading-[1.55] max-w-[55ch]"
@@ -72,10 +66,9 @@ export default function Banner({ year, idx }: { year: Year; idx: number }) {
 
           {/* RIGHT: roster */}
           <aside className="flex flex-col gap-4 min-w-0 text-shadow-strong">
-            <div className="flex items-center gap-2">
-              <h4 className="font-archivo text-white text-[12px] tracking-[0.2em] uppercase">Director Roster</h4>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full"
-                style={{ background: `${year.accent}1f`, color: year.accent, border: `1px solid ${year.accent}55` }}>
+            <div className="flex items-baseline gap-2">
+              <h4 className="font-instrumentSerif text-white text-[20px] tracking-tight">Directors</h4>
+              <span className="font-instrument text-[13px] text-white/45">
                 {year.execs.length}
               </span>
             </div>

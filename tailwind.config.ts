@@ -18,6 +18,8 @@ const config: Config = {
         press: ["var(--font-press-start)", "monospace"],
         vt: ["var(--font-vt323)", "monospace"],
         caveat: ["var(--font-caveat)", "cursive"],
+        instrument: ["var(--font-instrument-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        instrumentSerif: ["var(--font-instrument-serif)", "ui-serif", "Georgia", "serif"],
       },
       keyframes: {
         scan: {

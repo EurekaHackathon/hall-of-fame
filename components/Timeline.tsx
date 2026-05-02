@@ -136,7 +136,7 @@ export default function Timeline() {
             <a
               key={isFuture ? "future" : (s as Extract<Stop, {kind:"year"}>).year}
               href={`#y${s.year}`}
-              aria-label={isFuture ? "2027 · ???" : `${s.year} · ${(s as Extract<Stop, {kind:"year"}>).theme}`}
+              aria-label={isFuture ? "2027: ???" : `${s.year}: ${(s as Extract<Stop, {kind:"year"}>).theme}`}
               className="group absolute left-1/2 -translate-x-1/2 -translate-y-1/2"
               style={{
                 top: `${top}%`,
@@ -188,7 +188,7 @@ export default function Timeline() {
                 )}
               </span>
               <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap text-[11px] font-mono tracking-wide text-white opacity-0 group-hover:opacity-100 transition-opacity bg-black/85 px-2 py-1 rounded border border-white/10">
-                {isFuture ? "2027 · ???" : `${s.year} · ${(s as Extract<Stop, {kind:"year"}>).theme}`}
+                {isFuture ? "2027: ???" : `${s.year}: ${(s as Extract<Stop, {kind:"year"}>).theme}`}
               </span>
             </a>
           );

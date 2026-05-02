@@ -2,27 +2,18 @@
 import { YEARS } from "@/lib/years";
 import type { Exec } from "@/lib/types";
 
-const REASONS: { tag: string; title: string; body: string; accent: string }[] = [
+const REASONS: { title: string; body: string; accent: string }[] = [
   {
-    tag: "01 · The alumni network",
     title: "Three years deep, and counting.",
     body:
-      "Every cohort that came before is still a Slack message away — Waterloo SE undergrads, Cohere engineers, DECA ICDC winners, an HDSB Student Trustee, a YC-track founder. The network is the unfair advantage.",
+      "Every cohort that came before is still a Discord message away. Waterloo SE undergrads, Cohere engineers, DECA ICDC winners, an HDSB Student Trustee, a startup founder with $1M raised. The network is the unfair advantage.",
     accent: "#FFC93C",
   },
   {
-    tag: "02 · The people around you",
     title: "Find a room that pulls you forward.",
     body:
-      "The right environment is the one where the people next to you are sharper, kinder, and a little further along — and quietly raise your bar without ever making it feel like a competition. That's the room we're trying to build, every year.",
+      "The right environment is the one where the people next to you are sharper, kinder, and a little further along, and quietly raise your bar without ever making it feel like a competition. That's the room we're trying to build, every year.",
     accent: "#7CFFCB",
-  },
-  {
-    tag: "03 · The room",
-    title: "We genuinely just like working together.",
-    body:
-      "No gatekeeping, no résumé politics. The board is friends who tell each other the truth, fix each other's bugs at 2am, and stay in the chat long after grad. If that's the kind of group you've been looking for — come find us.",
-    accent: "#A78BFA",
   },
 ];
 
@@ -118,20 +109,7 @@ export default function Banner2027() {
           <div className="relative z-[5] p-8 md:p-14 grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-14">
             {/* LEFT — the mystery 2027 statement */}
             <div className="flex flex-col gap-6">
-              <div className="flex items-center gap-3">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-300/70" />
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-300" />
-                </span>
-                <span className="font-mono text-[11px] tracking-[0.32em] uppercase text-amber-300/90">
-                  Recruitment · Status: dropping soon
-                </span>
-              </div>
-
               <div>
-                <div className="font-mono text-[11px] tracking-[0.28em] uppercase text-white/45 mb-2">
-                  · The next chapter ·
-                </div>
                 <h2
                   className="font-archivo text-white tracking-tight leading-[0.85]"
                   style={{ fontSize: "clamp(72px, 14vw, 168px)" }}
@@ -159,48 +137,43 @@ export default function Banner2027() {
                 <span className="text-amber-300 not-italic font-archivo tracking-tight">
                   people we want next to us
                 </span>{" "}
-                — and inviting you to be one of them.
+                , and inviting you to be one of them.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 pt-2">
                 <a
-                  href="mailto:eurekahacks@gmail.com?subject=2027%20board%20application"
+                  href="/apply"
                   className="group inline-flex items-center gap-2 px-6 py-3 rounded-full font-archivo text-sm tracking-tight text-black bg-amber-300 hover:bg-amber-200 transition-colors shadow-[0_8px_30px_rgba(253,224,71,0.35)]"
                 >
-                  Apply for the 2027 board
+                  Apply for the 2027 exec
                   <span className="group-hover:translate-x-0.5 transition-transform">
                     →
                   </span>
                 </a>
-                <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-white/40">
-                  Form drops late 2026
-                </span>
               </div>
             </div>
 
             {/* RIGHT — three reasons stacked, with alumni network leading */}
             <div className="flex flex-col gap-3">
-              <div className="font-mono text-[11px] tracking-[0.32em] uppercase text-white/45 mb-1">
-                Why join · the short list
-              </div>
-
               {REASONS.map((r, i) => (
                 <div
-                  key={r.tag}
+                  key={r.title}
                   className="relative rounded-xl p-4 md:p-5 transition-colors"
                   style={{
                     background: "rgba(255,255,255,0.025)",
                     border: "1px dashed rgba(255,255,255,0.18)",
                   }}
                 >
-                  <div
-                    className="font-mono text-[10px] tracking-[0.24em] uppercase mb-1.5"
-                    style={{ color: r.accent }}
-                  >
-                    {r.tag}
-                  </div>
-                  <div className="font-fraunces italic font-extrabold text-white text-lg md:text-xl leading-tight mb-1.5">
-                    {r.title}
+                  <div className="flex items-baseline gap-2.5 mb-1.5">
+                    <span
+                      className="font-instrumentSerif text-[20px] leading-none"
+                      style={{ color: r.accent }}
+                    >
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="font-instrumentSerif text-white text-[20px] md:text-[22px] leading-tight">
+                      {r.title}
+                    </div>
                   </div>
                   <p className="text-white/65 text-sm leading-relaxed">{r.body}</p>
 
@@ -239,8 +212,8 @@ export default function Banner2027() {
                           +30
                         </span>
                       </div>
-                      <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/55">
-                        '23 → '26 alumni · still in the chat
+                      <span className="font-instrument text-[12.5px] text-white/55">
+                        Alumni from every cohort, still in the chat.
                       </span>
                     </div>
                   )}
@@ -249,12 +222,6 @@ export default function Banner2027() {
             </div>
           </div>
 
-          {/* footer strip */}
-          <div className="relative z-[5] border-t border-dashed border-white/15 px-8 md:px-14 py-4 flex items-center justify-between text-[10px] font-mono tracking-[0.24em] uppercase text-white/45">
-            <span>· come say hi ·</span>
-            <span>file: 2027/board.dossier</span>
-            <span>rev. {new Date().getFullYear()}</span>
-          </div>
         </article>
       </div>
     </section>

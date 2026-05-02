@@ -17,7 +17,7 @@ export default function ExecAvatar({
   return (
     <button
       onClick={onClick}
-      title={`${exec.name} · ${exec.role}`}
+      title={`${exec.name}, ${exec.role}`}
       className="group relative flex flex-col items-center gap-1.5 transition-transform hover:-translate-y-0.5 focus:outline-none"
       style={{ width: size }}
     >

@@ -9,6 +9,8 @@ import {
   Press_Start_2P,
   VT323,
   Caveat,
+  Instrument_Sans,
+  Instrument_Serif,
 } from "next/font/google";
 import Cursor from "@/components/Cursor";
 import "./globals.css";
@@ -22,11 +24,13 @@ const bungeeShade = Bungee_Shade({ weight: "400", subsets: ["latin"], variable: 
 const pressStart = Press_Start_2P({ weight: "400", subsets: ["latin"], variable: "--font-press-start", display: "swap" });
 const vt = VT323({ weight: "400", subsets: ["latin"], variable: "--font-vt323", display: "swap" });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: "swap" });
+const instrumentSans = Instrument_Sans({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-instrument-sans", display: "swap" });
+const instrumentSerif = Instrument_Serif({ weight: "400", style: ["normal", "italic"], subsets: ["latin"], variable: "--font-instrument-serif", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "EurekaHACKS — Hall of Fame",
+  title: "EurekaHACKS Hall of Fame",
   description:
-    "Four editions, four cohorts, one environment. The EurekaHACKS Hall of Fame: 2023—2026.",
+    "Four editions, four cohorts, one environment. The EurekaHACKS Hall of Fame, 2023 to 2026.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -43,6 +47,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           pressStart.variable,
           vt.variable,
           caveat.variable,
+          instrumentSans.variable,
+          instrumentSerif.variable,
           "font-grotesk antialiased bg-[#06070b] text-white",
         ].join(" ")}
       >

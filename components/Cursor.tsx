@@ -19,7 +19,6 @@ export default function Cursor() {
     if (window.matchMedia("(pointer: coarse)").matches) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     setEnabled(true);
-    document.documentElement.classList.add("cursor-eureka");
 
     const lookup = new Map(
       YEARS.map((y) => [y.year, { accent: y.accent, icon: y.icon }])
@@ -89,6 +88,12 @@ export default function Cursor() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!enabled) return;
+    if (hover) document.documentElement.classList.add("cursor-eureka");
+    else document.documentElement.classList.remove("cursor-eureka");
+  }, [hover, enabled]);
+
   if (!enabled) return null;
 
   return (
@@ -130,23 +135,7 @@ export default function Cursor() {
         >
           ?
         </div>
-      ) : (
-        // Off-card default — small luminous accent dot
-        <div
-          className="relative grid place-items-center w-5 h-5 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle at 30% 30%, #FFC93C, #FFC93C55 55%, transparent 78%)",
-            boxShadow:
-              "0 0 0 1px #FFC93C66, 0 0 14px #FFC93Caa, 0 0 30px #FFC93C55",
-          }}
-        >
-          <span
-            className="block w-1 h-1 rounded-full"
-            style={{ background: "#0b0b10", opacity: 0.9 }}
-          />
-        </div>
-      )}
+      ) : null}
     </div>
   );
 }

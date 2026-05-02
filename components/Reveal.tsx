@@ -62,11 +62,11 @@ export default function Reveal({
             </div>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1.5 rounded-full bg-white/8 border border-white/15 text-sm">
-                <span className="text-white/55">University · </span>
+                <span className="text-white/55">University: </span>
                 <span className="text-white">{exec.uni}</span>
               </span>
               <span className="px-3 py-1.5 rounded-full bg-white/8 border border-white/15 text-sm">
-                <span className="text-white/55">Now · </span>
+                <span className="text-white/55">Now: </span>
                 <span className="text-white">{exec.now}</span>
               </span>
               {exec.linkedin && (
@@ -122,7 +122,7 @@ export default function Reveal({
                     </span>
                     <div className="min-w-0">
                       <div className="text-white text-sm font-medium truncate">{e.name}</div>
-                      <div className="text-white/55 text-xs truncate">{e.role} · {e.now}</div>
+                      <div className="text-white/55 text-xs truncate">{e.role}, {e.now}</div>
                     </div>
                   </button>
                 );

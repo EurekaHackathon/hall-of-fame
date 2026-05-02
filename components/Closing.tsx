@@ -12,12 +12,12 @@ export default function Closing() {
           </span>
         </p>
         <footer className="mt-6 text-center font-mono text-[11px] tracking-[0.28em] uppercase text-white/55">
-          — Jim Rohn
+Jim Rohn
         </footer>
       </blockquote>
 
-      <div className="mt-10 flex items-center justify-center text-white/45 text-xs font-mono tracking-wide">
-        EurekaHACKS · Abbey Park HS → Waterloo Accelerator Centre · 2023—2026
+      <div className="mt-10 flex items-center justify-center text-white/45 font-instrument text-[13px]">
+        EurekaHACKS, 2023 to 2026
       </div>
     </section>
   );
