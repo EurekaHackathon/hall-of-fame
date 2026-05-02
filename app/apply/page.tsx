@@ -21,6 +21,7 @@ type FormState = {
   hours: string;
   webProject: string;
   stack: string;
+  github: string;
   portfolioUrl: string;
   accountUrl: string;
   wrongWithEvent: string;
@@ -35,7 +36,7 @@ const EMPTY: FormState = {
   instagram: "", discord: "", oneLine: "",
   teams: [],
   flexible: "", why: "", hours: "",
-  webProject: "", stack: "",
+  webProject: "", stack: "", github: "",
   portfolioUrl: "",
   accountUrl: "",
   wrongWithEvent: "",
@@ -521,6 +522,20 @@ function TeamBlock({
 
       {team === "Web Dev" && (
         <div className="space-y-5">
+          <Field
+            label="GitHub"
+            required
+            help="Profile link. We'll poke around your repos."
+          >
+            <input
+              className={inputCls}
+              required
+              type="url"
+              placeholder="https://github.com/..."
+              value={f.github}
+              onChange={(e) => set("github", e.target.value)}
+            />
+          </Field>
           <Field
             label="A website or tool you've built"
             required

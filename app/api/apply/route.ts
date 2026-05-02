@@ -25,6 +25,7 @@ type Payload = {
   hours: string;
   webProject?: string;
   stack?: string;
+  github?: string;
   portfolioUrl?: string;
   accountUrl?: string;
   wrongWithEvent?: string;
@@ -79,7 +80,7 @@ export async function POST(req: Request) {
     return null;
   };
   const errs = [
-    requireFor("Web Dev", ["webProject", "stack"]),
+    requireFor("Web Dev", ["github", "webProject", "stack"]),
     requireFor("Design", ["portfolioUrl"]),
     requireFor("Marketing", ["accountUrl"]),
     requireFor("Logistics", ["wrongWithEvent"]),
@@ -108,6 +109,7 @@ export async function POST(req: Request) {
     hours: body.hours,
     webProject: body.webProject ?? "",
     stack: body.stack ?? "",
+    github: body.github ?? "",
     portfolioUrl: body.portfolioUrl ?? "",
     accountUrl: body.accountUrl ?? "",
     wrongWithEvent: body.wrongWithEvent ?? "",

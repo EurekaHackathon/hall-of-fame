@@ -20,6 +20,7 @@ export const applications = pgTable("applications", {
   hours: text("hours"),
   webProject: text("webProject"),
   stack: text("stack"),
+  github: text("github"),
   portfolioUrl: text("portfolioUrl"),
   accountUrl: text("accountUrl"),
   wrongWithEvent: text("wrongWithEvent"),
