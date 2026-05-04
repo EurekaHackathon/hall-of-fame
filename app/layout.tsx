@@ -27,10 +27,32 @@ const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: 
 const instrumentSans = Instrument_Sans({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-instrument-sans", display: "swap" });
 const instrumentSerif = Instrument_Serif({ weight: "400", style: ["normal", "italic"], subsets: ["latin"], variable: "--font-instrument-serif", display: "swap" });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
+
+const siteTitle = "EurekaHACKS Hall of Fame";
+const siteDescription =
+  "Four editions, four cohorts, one environment. The EurekaHACKS Hall of Fame, 2023 to 2026.";
+
 export const metadata: Metadata = {
-  title: "EurekaHACKS Hall of Fame",
-  description:
-    "Four editions, four cohorts, one environment. The EurekaHACKS Hall of Fame, 2023 to 2026.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    type: "website",
+    siteName: siteTitle,
+    url: "/",
+  },
+  twitter: {
+    card: "summary",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
