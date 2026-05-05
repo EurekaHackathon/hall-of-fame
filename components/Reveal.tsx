@@ -62,7 +62,7 @@ export default function Reveal({
             </div>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1.5 rounded-full bg-white/8 border border-white/15 text-sm">
-                <span className="text-white/55">University: </span>
+                <span className="text-white/55">HS: </span>
                 <span className="text-white">{exec.uni}</span>
               </span>
               <span className="px-3 py-1.5 rounded-full bg-white/8 border border-white/15 text-sm">
@@ -82,6 +82,21 @@ export default function Reveal({
                   }}
                 >
                   LinkedIn ↗
+                </a>
+              )}
+              {exec.website && (
+                <a
+                  href={exec.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-full text-sm font-medium transition-colors"
+                  style={{
+                    background: `${accent}1f`,
+                    border: `1px solid ${accent}66`,
+                    color: accent,
+                  }}
+                >
+                  Website ↗
                 </a>
               )}
             </div>

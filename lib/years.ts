@@ -22,6 +22,7 @@ export const YEARS: Year[] = [
     artComponent: "Art2023",
     location: "Abbey Park HS, Oakville, ON",
     icon: "/icons/2023.png",
+    website: "2023.eurekahacks.ca",
     desc:
       "May 13, 2023. The humble origins. The mission was simple and only a little audacious: build a Hack the North, but for high schoolers.",
     stats: [
@@ -45,6 +46,7 @@ export const YEARS: Year[] = [
     artComponent: "Art2024",
     location: "Abbey Park HS, Oakville, ON",
     icon: "/icons/2024.png",
+    website: "2024.eurekahacks.ca",
     desc:
       "May 4, 2024. Running it back. Twice the hackers.",
     stats: [
@@ -70,6 +72,7 @@ export const YEARS: Year[] = [
     artComponent: "Art2025",
     location: "Abbey Park HS, Oakville, ON",
     icon: "/icons/2025.png",
+    website: "2025.eurekahacks.ca",
     desc:
       "April 5, 2025. 10x the prize valuation. 3D printers on the floor.",
     stats: [
@@ -98,6 +101,7 @@ export const YEARS: Year[] = [
     artComponent: "Art2026",
     location: "Waterloo Accelerator Centre, Waterloo, ON",
     icon: "/icons/2026.png",
+    website: "2026.eurekahacks.ca",
     desc:
       "May 1–2, 2026. All-in on the hacker experience. Amazing food. Amazing prizes. Free NFC cards for every hacker. Duration doubled, first overnight edition.",
     stats: [
@@ -111,6 +115,7 @@ export const YEARS: Year[] = [
       { initials: "JJ", name: "Jenny Jin", role: "Marketing", uni: "Abbey Park HS", now: "We'll see where she goes :)", ph1: pal(0)[0], ph2: pal(0)[1], headshot: "/headshots/2026/Jenny.webp" },
       { initials: "AN", name: "Anvi Nambiar", role: "Marketing", uni: "Abbey Park HS", now: "We'll see where she goes :)", ph1: pal(7)[0], ph2: pal(7)[1], headshot: "/headshots/2026/Anvi.webp" },
       { initials: "PZ", name: "Peony Zuo", role: "Marketing", uni: "Abbey Park HS", now: "We'll see where she goes :)", ph1: pal(8)[0], ph2: pal(8)[1], headshot: "/headshots/2026/Peony.webp" },
+      { initials: "JP", name: "Jamie Peacock", role: "Programmer and Logistics", uni: "Abbey Park HS", now: "We'll see where they go :)", ph1: "#54a7ff", ph2: "#54a7ff", headshot: "/headshots/2026/Jamie.png", website: "https://ozzyabc.xyz"},
       { initials: "DZ", name: "Daniel Zhu", role: "Sponsorships", uni: "Abbey Park HS", now: "We'll see where he goes :)", ph1: pal(3)[0], ph2: pal(3)[1], headshot: "/headshots/2026/DanielZhu.webp" },
       { initials: "JB", name: "Jacob Blais", role: "Sponsorships", uni: "Abbey Park HS", now: "We'll see where he goes :)", ph1: pal(6)[0], ph2: pal(6)[1], headshot: "/headshots/2026/Jacob.webp" },
       { initials: "AL", name: "Alan Liu", role: "Sponsorships", uni: "Abbey Park HS", now: "We'll see where he goes :)", ph1: pal(2)[0], ph2: pal(2)[1], headshot: "/headshots/2026/Alan.webp" },

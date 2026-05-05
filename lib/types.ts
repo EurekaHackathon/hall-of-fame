@@ -7,6 +7,7 @@ export interface Exec {
   ph1: string;
   ph2: string;
   linkedin?: string;
+  website?: string;
   headshot?: string;
 }
 
@@ -22,6 +23,7 @@ export interface Year {
   artComponent: string;
   location: string;
   desc: string;
+  website?: string;
   stats: Stat[];
   execs: Exec[];
   /** Local path or URL for the year's mark used in the timeline rail. */

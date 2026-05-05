@@ -54,6 +54,17 @@ export default function Banner({ year, idx }: { year: Year; idx: number }) {
               style={{ "--accent": year.accent } as React.CSSProperties}>
               {year.desc}
             </p>
+            {year.website && (
+              <a
+                href={`https://${year.website}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[12px] tracking-wide opacity-60 hover:opacity-100 transition-opacity"
+                style={{ color: year.accent }}
+              >
+                {year.website} ↗
+              </a>
+            )}
             <div className="flex flex-wrap gap-x-8 gap-y-3 mt-1">
               {year.stats.map((s) => (
                 <div key={s.l}>
