@@ -35,7 +35,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 const siteTitle = "EurekaHACKS Hall of Fame";
 const siteDescription =
-  "Four editions, four cohorts, one environment. The EurekaHACKS Hall of Fame, 2023 to 2026.";
+  "Four editions, four cohorts, one environment. Explore the EurekaHACKS Hall of Fame, 2023 to 2026 — and apply to join the next cohort.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
