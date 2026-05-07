@@ -31,29 +31,72 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? process.env.NEXT_PUBLIC_SITE_URL
   : process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
+    : "https://apply.eurekahacks.ca";
 
 const siteTitle = "EurekaHACKS Hall of Fame";
 const siteDescription =
-  "Four editions, four cohorts, one environment. Explore the EurekaHACKS Hall of Fame, 2023 to 2026 — and apply to join the next cohort.";
+  "The full story of EurekaHACKS, from 2023 to 2026. Read about every cohort that built it and apply for the 2027 team.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: siteTitle,
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteTitle}`,
+  },
   description: siteDescription,
+  applicationName: siteTitle,
   authors: [{ name: "Eason Huang", url: "https://easonhuang.dev" }],
   creator: "Eason Huang",
+  publisher: "EurekaHACKS",
+  category: "technology",
+  keywords: [
+    "EurekaHACKS",
+    "EurekaHACKS Hall of Fame",
+    "EurekaHACKS application",
+    "apply to EurekaHACKS",
+    "EurekaHACKS exec application",
+    "high school hackathon",
+    "Canadian hackathon",
+    "Oakville hackathon",
+    "Abbey Park",
+    "Abbey Park High School",
+    "Waterloo Accelerator Centre",
+    "student hackathon",
+    "Ontario hackathon",
+    "EurekaHACKS exec",
+    "EurekaHACKS 2027",
+    "EurekaHACKS 2026",
+    "EurekaHACKS 2025",
+    "EurekaHACKS 2024",
+    "EurekaHACKS 2023",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: siteTitle,
     description: siteDescription,
     type: "website",
     siteName: siteTitle,
     url: "/",
+    locale: "en_CA",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
+    creator: "@EurekaHACKS",
+    site: "@EurekaHACKS",
   },
 };
 
