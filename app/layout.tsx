@@ -41,6 +41,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: siteTitle,
   description: siteDescription,
+  authors: [{ name: "Eason Huang", url: "https://easonhuang.dev" }],
+  creator: "Eason Huang",
   openGraph: {
     title: siteTitle,
     description: siteDescription,

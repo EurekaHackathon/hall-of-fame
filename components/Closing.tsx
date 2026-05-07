@@ -16,8 +16,18 @@ Jim Rohn
         </footer>
       </blockquote>
 
-      <div className="mt-10 flex items-center justify-center text-white/45 font-instrument text-[13px]">
-        EurekaHACKS, 2023 to 2026
+      <div className="mt-10 flex flex-col items-center justify-center gap-2 text-white/45 font-instrument text-[13px]">
+        <div>EurekaHACKS, 2023 to 2026</div>
+        <div>
+          Site by{" "}
+          <a
+            href="https://easonhuang.dev"
+            className="text-white/70 hover:text-amber-300 underline underline-offset-4 decoration-white/20 hover:decoration-amber-300/60 transition-colors"
+            rel="author"
+          >
+            Eason Huang
+          </a>
+        </div>
       </div>
     </section>
   );
